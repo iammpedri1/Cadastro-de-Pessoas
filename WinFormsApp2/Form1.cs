@@ -56,5 +56,25 @@ namespace WinFormsApp2
         {
 
         }
+
+        private void grpContato_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpIdentificacao_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpNascimento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCNH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -117,45 +117,6 @@
             btnSalvar = new Button();
             btnLimpar = new Button();
             btnCancelar = new Button();
-
-            ConfigureLabel(lblNome, "Nome:", 20, 30, 90);
-            ConfigureTextBox(txtNome, "txtNome", 120, 30, 180);
-            ConfigureLabel(lblRG, "RG:", 20, 70, 90);
-            ConfigureTextBox(txtRG, "txtRG", 120, 70, 180);
-            ConfigureLabel(lblCPF, "CPF:", 20, 110, 90);
-            ConfigureTextBox(txtCPF, "txtCPF", 120, 110, 180);
-            ConfigureLabel(lblCNH, "CNH:", 320, 30, 90);
-            ConfigureTextBox(txtCNH, "txtCNH", 420, 30, 120);
-            ConfigureLabel(lblNascimento, "Nascimento:", 320, 70, 90);
-
-            ConfigureLabel(lblCEP, "CEP:", 20, 30, 90);
-            ConfigureTextBox(txtCEP, "txtCEP", 120, 30, 120);
-            ConfigureButton(btnBuscarCEP, "Buscar", "btnBuscarCEP", 250, 27, 90);
-            ConfigureLabel(lblLogradouro, "Logradouro:", 20, 70, 90);
-            ConfigureTextBox(txtLogradouro, "txtLogradouro", 120, 70, 300);
-            ConfigureLabel(lblNumero, "Número:", 20, 110, 90);
-            ConfigureTextBox(txtNumero, "txtNumero", 120, 110, 100);
-            ConfigureLabel(lblComplemento, "Complemento:", 250, 110, 100);
-            ConfigureTextBox(txtComplemento, "txtComplemento", 355, 110, 185);
-            ConfigureLabel(lblBairro, "Bairro:", 20, 150, 90);
-            ConfigureTextBox(txtBairro, "txtBairro", 120, 150, 300);
-            ConfigureLabel(lblCidade, "Cidade:", 20, 190, 90);
-            ConfigureTextBox(txtCidade, "txtCidade", 120, 190, 220);
-            ConfigureLabel(lblEstado, "Estado:", 355, 190, 60);
-            ConfigureTextBox(txtEstado, "txtEstado", 420, 190, 120);
-            ConfigureLabel(lblEmail, "E-mail:", 20, 230, 90);
-            ConfigureTextBox(txtEmail, "txtEmail", 120, 230, 300);
-            ConfigureLabel(lblTelefone, "Telefone:", 20, 270, 90);
-            ConfigureTextBox(txtTelefone, "txtTelefone", 120, 270, 180);
-
-            ConfigureButton(btnSelecionarFoto, "Selecionar foto", "btnSelecionarFoto", 55, 250, 140);
-            ConfigureLabel(lblDataConsulta, "Data da consulta:", 20, 30, 180);
-            ConfigureLabel(lblHorarioConsulta, "Horário:", 20, 295, 90);
-            ConfigureButton(btnAgendar, "Agendar", "btnAgendar", 20, 340, 120);
-            ConfigureButton(btnSalvar, "Salvar", "btnSalvar", 790, 17, 100);
-            ConfigureButton(btnLimpar, "Limpar", "btnLimpar", 900, 17, 100);
-            ConfigureButton(btnCancelar, "Cancelar", "btnCancelar", 1010, 17, 100);
-
             grpIdentificacao.SuspendLayout();
             grpContato.SuspendLayout();
             grpFoto.SuspendLayout();
@@ -177,7 +138,7 @@
             // 
             // grpIdentificacao
             // 
-            grpIdentificacao.BackColor = Color.White;
+            grpIdentificacao.BackColor = Color.FromArgb(245, 247, 250);
             grpIdentificacao.Controls.Add(lblNome);
             grpIdentificacao.Controls.Add(txtNome);
             grpIdentificacao.Controls.Add(lblRG);
@@ -189,87 +150,100 @@
             grpIdentificacao.Controls.Add(lblNascimento);
             grpIdentificacao.Controls.Add(dtpNascimento);
             grpIdentificacao.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            grpIdentificacao.ForeColor = Color.FromArgb(45, 55, 72);
             grpIdentificacao.Location = new Point(28, 70);
             grpIdentificacao.Name = "grpIdentificacao";
+            grpIdentificacao.Padding = new Padding(12, 20, 12, 12);
             grpIdentificacao.Size = new Size(570, 190);
             grpIdentificacao.TabIndex = 1;
             grpIdentificacao.TabStop = false;
             grpIdentificacao.Text = "Identificação";
+            grpIdentificacao.Enter += grpIdentificacao_Enter;
             // 
             // lblNome
             // 
-            lblNome.Location = new Point(0, 0);
+            lblNome.Location = new Point(20, 30);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(100, 23);
+            lblNome.Size = new Size(49, 23);
             lblNome.TabIndex = 0;
+            lblNome.Text = "Nome:";
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(0, 0);
+            txtNome.Location = new Point(75, 30);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(100, 23);
+            txtNome.Size = new Size(180, 23);
             txtNome.TabIndex = 1;
             // 
             // lblRG
             // 
-            lblRG.Location = new Point(0, 0);
+            lblRG.Location = new Point(20, 70);
             lblRG.Name = "lblRG";
-            lblRG.Size = new Size(100, 23);
+            lblRG.Size = new Size(32, 23);
             lblRG.TabIndex = 2;
+            lblRG.Text = "RG:";
             // 
             // txtRG
             // 
-            txtRG.Location = new Point(0, 0);
+            txtRG.Location = new Point(75, 67);
             txtRG.Name = "txtRG";
-            txtRG.Size = new Size(100, 23);
+            txtRG.Size = new Size(180, 23);
             txtRG.TabIndex = 3;
             // 
             // lblCPF
             // 
-            lblCPF.Location = new Point(0, 0);
+            lblCPF.Location = new Point(20, 110);
             lblCPF.Name = "lblCPF";
-            lblCPF.Size = new Size(100, 23);
+            lblCPF.Size = new Size(32, 23);
             lblCPF.TabIndex = 4;
+            lblCPF.Text = "CPF:";
             // 
             // txtCPF
             // 
-            txtCPF.Location = new Point(0, 0);
+            txtCPF.Location = new Point(75, 110);
             txtCPF.Name = "txtCPF";
-            txtCPF.Size = new Size(100, 23);
+            txtCPF.Size = new Size(180, 23);
             txtCPF.TabIndex = 5;
             // 
             // lblCNH
             // 
-            lblCNH.Location = new Point(0, 0);
+            lblCNH.Location = new Point(324, 24);
             lblCNH.Name = "lblCNH";
-            lblCNH.Size = new Size(100, 23);
+            lblCNH.Size = new Size(46, 23);
             lblCNH.TabIndex = 6;
+            lblCNH.Text = "CNH:";
             // 
             // txtCNH
             // 
-            txtCNH.Location = new Point(0, 0);
+            txtCNH.Location = new Point(376, 24);
             txtCNH.Name = "txtCNH";
-            txtCNH.Size = new Size(100, 23);
+            txtCNH.Size = new Size(120, 23);
             txtCNH.TabIndex = 7;
+            txtCNH.TextChanged += txtCNH_TextChanged;
             // 
             // lblNascimento
             // 
-            lblNascimento.Location = new Point(0, 0);
+            lblNascimento.Location = new Point(324, 56);
             lblNascimento.Name = "lblNascimento";
-            lblNascimento.Size = new Size(100, 23);
+            lblNascimento.Size = new Size(81, 23);
             lblNascimento.TabIndex = 8;
+            lblNascimento.Text = "Nascimento:";
             // 
             // dtpNascimento
             // 
+            dtpNascimento.CalendarForeColor = Color.FromArgb(31, 41, 55);
+            dtpNascimento.CalendarMonthBackground = Color.White;
+            dtpNascimento.Font = new Font("Segoe UI", 9F);
             dtpNascimento.Format = DateTimePickerFormat.Short;
-            dtpNascimento.Location = new Point(438, 114);
+            dtpNascimento.Location = new Point(411, 56);
             dtpNascimento.Name = "dtpNascimento";
             dtpNascimento.Size = new Size(100, 23);
             dtpNascimento.TabIndex = 9;
+            dtpNascimento.ValueChanged += dtpNascimento_ValueChanged;
             // 
             // grpContato
             // 
-            grpContato.BackColor = Color.White;
+            grpContato.BackColor = Color.FromArgb(245, 247, 250);
             grpContato.Controls.Add(lblCEP);
             grpContato.Controls.Add(txtCEP);
             grpContato.Controls.Add(btnBuscarCEP);
@@ -290,154 +264,169 @@
             grpContato.Controls.Add(lblTelefone);
             grpContato.Controls.Add(txtTelefone);
             grpContato.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            grpContato.ForeColor = Color.FromArgb(45, 55, 72);
             grpContato.Location = new Point(28, 275);
             grpContato.Name = "grpContato";
+            grpContato.Padding = new Padding(12, 20, 12, 12);
             grpContato.Size = new Size(570, 365);
             grpContato.TabIndex = 2;
             grpContato.TabStop = false;
             grpContato.Text = "Contato e endereço";
+            grpContato.Enter += grpContato_Enter;
             // 
             // lblCEP
             // 
-            lblCEP.Location = new Point(0, 0);
+            lblCEP.Location = new Point(20, 30);
             lblCEP.Name = "lblCEP";
-            lblCEP.Size = new Size(100, 23);
+            lblCEP.Size = new Size(90, 23);
             lblCEP.TabIndex = 0;
+            lblCEP.Text = "CEP:";
             // 
             // txtCEP
             // 
-            txtCEP.Location = new Point(0, 0);
+            txtCEP.Location = new Point(120, 30);
             txtCEP.Name = "txtCEP";
-            txtCEP.Size = new Size(100, 23);
+            txtCEP.Size = new Size(120, 23);
             txtCEP.TabIndex = 1;
             // 
             // btnBuscarCEP
             // 
-            btnBuscarCEP.Location = new Point(0, 0);
+            btnBuscarCEP.Location = new Point(250, 27);
             btnBuscarCEP.Name = "btnBuscarCEP";
-            btnBuscarCEP.Size = new Size(75, 23);
+            btnBuscarCEP.Size = new Size(90, 30);
             btnBuscarCEP.TabIndex = 2;
+            btnBuscarCEP.Text = "Buscar";
             // 
             // lblLogradouro
             // 
-            lblLogradouro.Location = new Point(0, 0);
+            lblLogradouro.Location = new Point(20, 70);
             lblLogradouro.Name = "lblLogradouro";
-            lblLogradouro.Size = new Size(100, 23);
+            lblLogradouro.Size = new Size(90, 23);
             lblLogradouro.TabIndex = 3;
+            lblLogradouro.Text = "Logradouro:";
             // 
             // txtLogradouro
             // 
-            txtLogradouro.Location = new Point(0, 0);
+            txtLogradouro.Location = new Point(120, 70);
             txtLogradouro.Name = "txtLogradouro";
-            txtLogradouro.Size = new Size(100, 23);
+            txtLogradouro.Size = new Size(300, 23);
             txtLogradouro.TabIndex = 4;
             // 
             // lblNumero
             // 
-            lblNumero.Location = new Point(0, 0);
+            lblNumero.Location = new Point(20, 110);
             lblNumero.Name = "lblNumero";
-            lblNumero.Size = new Size(100, 23);
+            lblNumero.Size = new Size(90, 23);
             lblNumero.TabIndex = 5;
+            lblNumero.Text = "Número:";
             // 
             // txtNumero
             // 
-            txtNumero.Location = new Point(0, 0);
+            txtNumero.Location = new Point(120, 110);
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(100, 23);
             txtNumero.TabIndex = 6;
             // 
             // lblComplemento
             // 
-            lblComplemento.Location = new Point(0, 0);
+            lblComplemento.Location = new Point(250, 110);
             lblComplemento.Name = "lblComplemento";
             lblComplemento.Size = new Size(100, 23);
             lblComplemento.TabIndex = 7;
+            lblComplemento.Text = "Complemento:";
             // 
             // txtComplemento
             // 
-            txtComplemento.Location = new Point(0, 0);
+            txtComplemento.Location = new Point(355, 110);
             txtComplemento.Name = "txtComplemento";
-            txtComplemento.Size = new Size(100, 23);
+            txtComplemento.Size = new Size(185, 23);
             txtComplemento.TabIndex = 8;
             // 
             // lblBairro
             // 
-            lblBairro.Location = new Point(0, 0);
+            lblBairro.Location = new Point(20, 150);
             lblBairro.Name = "lblBairro";
-            lblBairro.Size = new Size(100, 23);
+            lblBairro.Size = new Size(90, 23);
             lblBairro.TabIndex = 9;
+            lblBairro.Text = "Bairro:";
             // 
             // txtBairro
             // 
-            txtBairro.Location = new Point(0, 0);
+            txtBairro.Location = new Point(120, 150);
             txtBairro.Name = "txtBairro";
-            txtBairro.Size = new Size(100, 23);
+            txtBairro.Size = new Size(300, 23);
             txtBairro.TabIndex = 10;
             // 
             // lblCidade
             // 
-            lblCidade.Location = new Point(0, 0);
+            lblCidade.Location = new Point(20, 190);
             lblCidade.Name = "lblCidade";
-            lblCidade.Size = new Size(100, 23);
+            lblCidade.Size = new Size(90, 23);
             lblCidade.TabIndex = 11;
+            lblCidade.Text = "Cidade:";
             // 
             // txtCidade
             // 
-            txtCidade.Location = new Point(0, 0);
+            txtCidade.Location = new Point(120, 190);
             txtCidade.Name = "txtCidade";
-            txtCidade.Size = new Size(100, 23);
+            txtCidade.Size = new Size(220, 23);
             txtCidade.TabIndex = 12;
             // 
             // lblEstado
             // 
-            lblEstado.Location = new Point(0, 0);
+            lblEstado.Location = new Point(355, 190);
             lblEstado.Name = "lblEstado";
-            lblEstado.Size = new Size(100, 23);
+            lblEstado.Size = new Size(60, 23);
             lblEstado.TabIndex = 13;
+            lblEstado.Text = "Estado:";
             // 
             // txtEstado
             // 
-            txtEstado.Location = new Point(0, 0);
+            txtEstado.Location = new Point(420, 190);
             txtEstado.Name = "txtEstado";
-            txtEstado.Size = new Size(100, 23);
+            txtEstado.Size = new Size(120, 23);
             txtEstado.TabIndex = 14;
             // 
             // lblEmail
             // 
-            lblEmail.Location = new Point(0, 0);
+            lblEmail.Location = new Point(20, 230);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(100, 23);
+            lblEmail.Size = new Size(90, 23);
             lblEmail.TabIndex = 15;
+            lblEmail.Text = "E-mail:";
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(0, 0);
+            txtEmail.Location = new Point(120, 230);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(100, 23);
+            txtEmail.Size = new Size(300, 23);
             txtEmail.TabIndex = 16;
             // 
             // lblTelefone
             // 
-            lblTelefone.Location = new Point(0, 0);
+            lblTelefone.Location = new Point(20, 270);
             lblTelefone.Name = "lblTelefone";
-            lblTelefone.Size = new Size(100, 23);
+            lblTelefone.Size = new Size(90, 23);
             lblTelefone.TabIndex = 17;
+            lblTelefone.Text = "Telefone:";
             // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(0, 0);
+            txtTelefone.Location = new Point(120, 270);
             txtTelefone.Name = "txtTelefone";
-            txtTelefone.Size = new Size(100, 23);
+            txtTelefone.Size = new Size(180, 23);
             txtTelefone.TabIndex = 18;
             // 
             // grpFoto
             // 
-            grpFoto.BackColor = Color.White;
+            grpFoto.BackColor = Color.FromArgb(245, 247, 250);
             grpFoto.Controls.Add(picFoto);
             grpFoto.Controls.Add(btnSelecionarFoto);
             grpFoto.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            grpFoto.ForeColor = Color.FromArgb(45, 55, 72);
             grpFoto.Location = new Point(620, 70);
             grpFoto.Name = "grpFoto";
+            grpFoto.Padding = new Padding(12, 20, 12, 12);
             grpFoto.Size = new Size(250, 300);
             grpFoto.TabIndex = 3;
             grpFoto.TabStop = false;
@@ -456,22 +445,29 @@
             // 
             // btnSelecionarFoto
             // 
-            btnSelecionarFoto.Location = new Point(0, 0);
+            btnSelecionarFoto.BackColor = Color.FromArgb(51, 86, 125);
+            btnSelecionarFoto.FlatStyle = FlatStyle.Flat;
+            btnSelecionarFoto.ForeColor = Color.White;
+            btnSelecionarFoto.Location = new Point(55, 250);
             btnSelecionarFoto.Name = "btnSelecionarFoto";
-            btnSelecionarFoto.Size = new Size(75, 23);
+            btnSelecionarFoto.Size = new Size(140, 30);
             btnSelecionarFoto.TabIndex = 1;
+            btnSelecionarFoto.Text = "Selecionar foto";
+            btnSelecionarFoto.UseVisualStyleBackColor = false;
             // 
             // grpAgendamento
             // 
-            grpAgendamento.BackColor = Color.White;
+            grpAgendamento.BackColor = Color.FromArgb(245, 247, 250);
             grpAgendamento.Controls.Add(lblDataConsulta);
             grpAgendamento.Controls.Add(mcalConsulta);
             grpAgendamento.Controls.Add(lblHorarioConsulta);
             grpAgendamento.Controls.Add(dtpHorarioConsulta);
             grpAgendamento.Controls.Add(btnAgendar);
             grpAgendamento.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            grpAgendamento.Location = new Point(895, 70);
+            grpAgendamento.ForeColor = Color.FromArgb(45, 55, 72);
+            grpAgendamento.Location = new Point(895, 20);
             grpAgendamento.Name = "grpAgendamento";
+            grpAgendamento.Padding = new Padding(12, 20, 12, 12);
             grpAgendamento.Size = new Size(275, 570);
             grpAgendamento.TabIndex = 4;
             grpAgendamento.TabStop = false;
@@ -479,43 +475,55 @@
             // 
             // lblDataConsulta
             // 
-            lblDataConsulta.Location = new Point(6, 0);
+            lblDataConsulta.Location = new Point(20, 30);
             lblDataConsulta.Name = "lblDataConsulta";
-            lblDataConsulta.Size = new Size(100, 23);
+            lblDataConsulta.Size = new Size(180, 23);
             lblDataConsulta.TabIndex = 0;
+            lblDataConsulta.Text = "Data da consulta:";
             // 
             // mcalConsulta
             // 
+            mcalConsulta.BackColor = Color.White;
+            mcalConsulta.Font = new Font("Segoe UI", 9F);
             mcalConsulta.Location = new Point(20, 62);
             mcalConsulta.Name = "mcalConsulta";
             mcalConsulta.TabIndex = 0;
             // 
             // lblHorarioConsulta
             // 
-            lblHorarioConsulta.Location = new Point(0, 0);
+            lblHorarioConsulta.Location = new Point(109, 235);
             lblHorarioConsulta.Name = "lblHorarioConsulta";
-            lblHorarioConsulta.Size = new Size(100, 23);
+            lblHorarioConsulta.Size = new Size(55, 20);
             lblHorarioConsulta.TabIndex = 1;
+            lblHorarioConsulta.Text = "Horário:";
             // 
             // dtpHorarioConsulta
             // 
+            dtpHorarioConsulta.CalendarForeColor = Color.FromArgb(31, 41, 55);
+            dtpHorarioConsulta.CalendarMonthBackground = Color.White;
+            dtpHorarioConsulta.Font = new Font("Segoe UI", 9F);
             dtpHorarioConsulta.Format = DateTimePickerFormat.Time;
-            dtpHorarioConsulta.Location = new Point(20, 298);
+            dtpHorarioConsulta.Location = new Point(61, 269);
             dtpHorarioConsulta.Name = "dtpHorarioConsulta";
             dtpHorarioConsulta.ShowUpDown = true;
-            dtpHorarioConsulta.Size = new Size(120, 23);
+            dtpHorarioConsulta.Size = new Size(139, 23);
             dtpHorarioConsulta.TabIndex = 2;
             // 
             // btnAgendar
             // 
-            btnAgendar.Location = new Point(0, 0);
+            btnAgendar.BackColor = Color.FromArgb(51, 86, 125);
+            btnAgendar.FlatStyle = FlatStyle.Flat;
+            btnAgendar.ForeColor = Color.White;
+            btnAgendar.Location = new Point(80, 347);
             btnAgendar.Name = "btnAgendar";
-            btnAgendar.Size = new Size(75, 23);
+            btnAgendar.Size = new Size(120, 30);
             btnAgendar.TabIndex = 3;
+            btnAgendar.Text = "Agendar";
+            btnAgendar.UseVisualStyleBackColor = false;
             // 
             // pnlAcoes
             // 
-            pnlAcoes.BackColor = Color.FromArgb(238, 242, 247);
+            pnlAcoes.BackColor = Color.FromArgb(190, 198, 210);
             pnlAcoes.Controls.Add(btnSalvar);
             pnlAcoes.Controls.Add(btnLimpar);
             pnlAcoes.Controls.Add(btnCancelar);
@@ -527,66 +535,45 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(0, 0);
+            btnSalvar.BackColor = Color.FromArgb(51, 86, 125);
+            btnSalvar.FlatStyle = FlatStyle.Flat;
+            btnSalvar.ForeColor = Color.White;
+            btnSalvar.Location = new Point(411, 17);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(75, 23);
+            btnSalvar.Size = new Size(100, 30);
             btnSalvar.TabIndex = 0;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = false;
             // 
             // btnLimpar
             // 
-            btnLimpar.Location = new Point(0, 0);
+            btnLimpar.BackColor = Color.FromArgb(51, 86, 125);
+            btnLimpar.FlatStyle = FlatStyle.Flat;
+            btnLimpar.ForeColor = Color.White;
+            btnLimpar.Location = new Point(521, 17);
             btnLimpar.Name = "btnLimpar";
-            btnLimpar.Size = new Size(75, 23);
+            btnLimpar.Size = new Size(100, 30);
             btnLimpar.TabIndex = 1;
+            btnLimpar.Text = "Limpar";
+            btnLimpar.UseVisualStyleBackColor = false;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(0, 0);
+            btnCancelar.BackColor = Color.FromArgb(51, 86, 125);
+            btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.ForeColor = Color.White;
+            btnCancelar.Location = new Point(631, 17);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.Size = new Size(100, 30);
             btnCancelar.TabIndex = 2;
-
-            ConfigureLabel(lblNome, "Nome:", 20, 30, 90);
-            ConfigureTextBox(txtNome, "txtNome", 120, 30, 180);
-            ConfigureLabel(lblRG, "RG:", 20, 70, 90);
-            ConfigureTextBox(txtRG, "txtRG", 120, 70, 180);
-            ConfigureLabel(lblCPF, "CPF:", 20, 110, 90);
-            ConfigureTextBox(txtCPF, "txtCPF", 120, 110, 180);
-            ConfigureLabel(lblCNH, "CNH:", 320, 30, 90);
-            ConfigureTextBox(txtCNH, "txtCNH", 420, 30, 120);
-            ConfigureLabel(lblNascimento, "Nascimento:", 320, 70, 90);
-            ConfigureLabel(lblCEP, "CEP:", 20, 30, 90);
-            ConfigureTextBox(txtCEP, "txtCEP", 120, 30, 120);
-            ConfigureButton(btnBuscarCEP, "Buscar", "btnBuscarCEP", 250, 27, 90);
-            ConfigureLabel(lblLogradouro, "Logradouro:", 20, 70, 90);
-            ConfigureTextBox(txtLogradouro, "txtLogradouro", 120, 70, 300);
-            ConfigureLabel(lblNumero, "Número:", 20, 110, 90);
-            ConfigureTextBox(txtNumero, "txtNumero", 120, 110, 100);
-            ConfigureLabel(lblComplemento, "Complemento:", 250, 110, 100);
-            ConfigureTextBox(txtComplemento, "txtComplemento", 355, 110, 185);
-            ConfigureLabel(lblBairro, "Bairro:", 20, 150, 90);
-            ConfigureTextBox(txtBairro, "txtBairro", 120, 150, 300);
-            ConfigureLabel(lblCidade, "Cidade:", 20, 190, 90);
-            ConfigureTextBox(txtCidade, "txtCidade", 120, 190, 220);
-            ConfigureLabel(lblEstado, "Estado:", 355, 190, 60);
-            ConfigureTextBox(txtEstado, "txtEstado", 420, 190, 120);
-            ConfigureLabel(lblEmail, "E-mail:", 20, 230, 90);
-            ConfigureTextBox(txtEmail, "txtEmail", 120, 230, 300);
-            ConfigureLabel(lblTelefone, "Telefone:", 20, 270, 90);
-            ConfigureTextBox(txtTelefone, "txtTelefone", 120, 270, 180);
-            ConfigureButton(btnSelecionarFoto, "Selecionar foto", "btnSelecionarFoto", 55, 250, 140);
-            ConfigureLabel(lblDataConsulta, "Data da consulta:", 20, 30, 180);
-            ConfigureLabel(lblHorarioConsulta, "Horário:", 20, 295, 90);
-            ConfigureButton(btnAgendar, "Agendar", "btnAgendar", 20, 340, 120);
-            ConfigureButton(btnSalvar, "Salvar", "btnSalvar", 790, 17, 100);
-            ConfigureButton(btnLimpar, "Limpar", "btnLimpar", 900, 17, 100);
-            ConfigureButton(btnCancelar, "Cancelar", "btnCancelar", 1010, 17, 100);
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(248, 249, 251);
+            BackColor = Color.FromArgb(225, 229, 235);
             ClientSize = new Size(1200, 750);
             Controls.Add(lblTitulo);
             Controls.Add(grpIdentificacao);
@@ -594,7 +581,9 @@
             Controls.Add(grpFoto);
             Controls.Add(grpAgendamento);
             Controls.Add(pnlAcoes);
+            DoubleBuffered = true;
             Font = new Font("Segoe UI", 9F);
+            ForeColor = Color.FromArgb(45, 55, 72);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "Form1";
@@ -612,29 +601,5 @@
             PerformLayout();
         }
 
-        private static void ConfigureLabel(Label label, string text, int x, int y, int width)
-        {
-            label.AutoSize = false;
-            label.Location = new Point(x, y);
-            label.Size = new Size(width, 23);
-            label.Text = text;
-            label.TextAlign = ContentAlignment.MiddleLeft;
-        }
-
-        private static void ConfigureTextBox(TextBox textBox, string name, int x, int y, int width)
-        {
-            textBox.Location = new Point(x, y);
-            textBox.Name = name;
-            textBox.Size = new Size(width, 23);
-        }
-
-        private static void ConfigureButton(Button button, string text, string name, int x, int y, int width)
-        {
-            button.Location = new Point(x, y);
-            button.Name = name;
-            button.Size = new Size(width, 30);
-            button.Text = text;
-            button.UseVisualStyleBackColor = true;
-        }
     }
 }
