@@ -1,0 +1,537 @@
+GUIA WINDOWS FORMS - TELA DE CADASTRO DE PESSOAS
+================================================
+
+Este guia explica como abrir, visualizar e modificar a interface Windows Forms criada neste projeto. A tela foi preparada somente como interface visual. Ela NÃO possui regras de negócio, validações, chamadas de API, banco de dados, salvamento ou carregamento funcional de fotos.
+
+
+1. COMO ABRIR O PROJETO NO VISUAL STUDIO
+-----------------------------------------
+
+1. Abra o Microsoft Visual Studio Community 2026 pelo menu Iniciar do Windows.
+2. Na tela inicial, clique em "Abrir um projeto ou uma solução".
+3. Navegue até a pasta do projeto:
+   C:\Users\pedro\source\repos\WinFormsApp2\
+4. Selecione o arquivo "WinFormsApp2.slnx".
+5. Clique em "Abrir".
+6. Aguarde o Visual Studio carregar a solução e concluir a análise dos arquivos.
+7. Se aparecer uma mensagem solicitando restauração de pacotes, aguarde o processo terminar. Este projeto usa os recursos próprios do Windows Forms e não precisa de uma biblioteca externa para esta tela.
+
+A solução contém um projeto chamado WinFormsApp2. Dentro dele estão, entre outros, os arquivos Form1.cs e Form1.Designer.cs.
+
+
+2. ONDE ENCONTRAR O WINDOWS FORMS DESIGNER
+-------------------------------------------
+
+O Windows Forms Designer é a tela visual na qual os controles podem ser vistos e organizados.
+
+1. Localize a janela "Gerenciador de Soluções", normalmente no lado direito do Visual Studio.
+2. Expanda o projeto "WinFormsApp2" clicando na seta ao lado do nome.
+3. Localize o arquivo "Form1.cs".
+4. Clique na seta ao lado de Form1.cs, caso ela esteja disponível.
+5. Você verá o arquivo relacionado "Form1.Designer.cs".
+6. Para abrir a tela visual, clique com o botão direito em "Form1.cs".
+7. Escolha "Exibir Designer".
+8. Outra forma é selecionar Form1.cs e pressionar Shift+F7.
+
+A tela que aparecer será o formulário visual. Nela estarão os GroupBox, TextBox, Labels, botões, PictureBox, calendário e DateTimePicker.
+
+O arquivo Form1.cs contém a classe principal do formulário e o construtor que chama InitializeComponent(). O arquivo Form1.Designer.cs contém a criação e a configuração visual dos controles. Em geral, quando o Designer está sendo usado, é melhor alterar propriedades pela janela Properties para reduzir o risco de apagar código automaticamente gerado.
+
+
+3. COMO ABRIR A TOOLBOX
+-----------------------
+
+A Toolbox é a caixa de ferramentas com os componentes visuais disponíveis.
+
+1. Abra o formulário no Designer usando os passos anteriores.
+2. Procure a janela chamada "Toolbox", normalmente no lado esquerdo.
+3. Se ela não estiver visível, no menu superior clique em "Exibir".
+4. Depois clique em "Caixa de Ferramentas" ou "Toolbox".
+5. Também é possível usar o atalho Ctrl+Alt+X.
+6. Na Toolbox, os componentes são separados por categorias, como "Common Controls" ou "Controles Comuns".
+7. Para encontrar um componente rapidamente, clique no campo de pesquisa da Toolbox e digite o nome, por exemplo TextBox, Button ou PictureBox.
+
+Para adicionar um controle:
+1. Localize o componente na Toolbox.
+2. Clique sobre ele.
+3. Arraste-o para o formulário ou para o GroupBox desejado.
+4. Solte o botão do mouse na posição escolhida.
+5. O novo componente aparecerá no Designer e também será criado no arquivo do Designer.
+
+
+4. COMO LOCALIZAR OS COMPONENTES DESTA TELA
+--------------------------------------------
+
+A tela está dividida em quatro áreas principais:
+
+- Identificação: contém Nome completo, RG, CPF, CNH e Data de nascimento.
+- Contato e endereço: contém CEP, Logradouro, Número, Complemento, Bairro, Cidade, Estado, E-mail e Telefone.
+- Foto do usuário: contém o PictureBox e o botão Selecionar Foto.
+- Agendamento de consulta: contém o MonthCalendar, o horário e o botão Agendar Consulta.
+
+Na parte inferior existem os botões Salvar, Limpar e Cancelar.
+
+Os nomes principais usados na tela são:
+
+- txtNome: TextBox do nome completo.
+- txtRG: TextBox do RG.
+- txtCPF: TextBox do CPF.
+- txtCNH: TextBox da CNH.
+- dtpNascimento: DateTimePicker da data de nascimento.
+- txtCEP: TextBox do CEP.
+- btnBuscarCEP: botão visual Buscar CEP.
+- txtLogradouro: TextBox do logradouro.
+- txtNumero: TextBox do número.
+- txtComplemento: TextBox do complemento.
+- txtBairro: TextBox do bairro.
+- txtCidade: TextBox da cidade.
+- txtEstado: TextBox do estado.
+- txtEmail: TextBox do e-mail.
+- txtTelefone: TextBox do telefone.
+- picFoto: PictureBox reservado para a foto.
+- btnSelecionarFoto: botão visual Selecionar Foto.
+- mcalConsulta: MonthCalendar da data da consulta.
+- dtpHorarioConsulta: DateTimePicker do horário da consulta.
+- btnAgendar: botão visual Agendar Consulta.
+- btnSalvar: botão visual Salvar.
+- btnLimpar: botão visual Limpar.
+- btnCancelar: botão visual Cancelar.
+
+Os GroupBox são grpIdentificacao, grpContato, grpFoto e grpAgendamento. O painel inferior é pnlAcoes.
+
+
+5. COMO SELECIONAR UM COMPONENTE
+---------------------------------
+
+1. Abra o formulário no Designer.
+2. Clique uma vez sobre o controle desejado.
+3. O controle ficará selecionado, normalmente com pequenos quadrados nas bordas.
+4. A janela Properties mostrará as propriedades daquele controle.
+5. Se não conseguir clicar no controle porque outro controle está sobreposto, use o Gerenciador de Documentos ou a lista de controles da janela Properties para selecioná-lo.
+6. No Designer, o contorno do componente ajuda a identificar qual controle foi selecionado.
+
+Para selecionar um GroupBox, clique na borda ou no título dele. Para selecionar um controle dentro dele, clique diretamente no campo, label ou botão.
+
+
+6. COMO ENCONTRAR AS PROPRIEDADES
+----------------------------------
+
+1. Selecione um componente no Designer.
+2. Procure a janela "Properties" ou "Propriedades", geralmente no canto inferior direito.
+3. Se ela não estiver visível, abra o menu "Exibir" e selecione "Janela Propriedades".
+4. O atalho normalmente usado é F4.
+5. A janela mostra uma lista de propriedades do componente selecionado.
+6. Para localizar uma propriedade, use a caixa de pesquisa da janela Properties.
+7. Clique no nome da propriedade para ver ou alterar seu valor.
+
+As propriedades podem aparecer organizadas por categoria, como Appearance, Layout, Design e Behavior. Também é possível usar a ordem alfabética para encontrar uma propriedade mais rapidamente.
+
+
+7. COMO ALTERAR O NOME DE UM COMPONENTE
+----------------------------------------
+
+O nome é o identificador usado posteriormente no código. Ele é diferente do texto que aparece na tela.
+
+Exemplo para configurar o TextBox do nome:
+1. Clique no TextBox do nome.
+2. Olhe para a janela Properties.
+3. Procure a propriedade "(Name)" ou "Name".
+4. Clique no valor atual, que pode ser algo como textBox1.
+5. Apague o valor antigo.
+6. Digite txtNome.
+7. Pressione Enter.
+8. A partir desse momento, o componente poderá ser encontrado no código pelo nome txtNome.
+
+Use nomes sem espaços e sem acentos. Os nomes desta tela seguem uma convenção:
+- txt para TextBox, como txtCPF.
+- btn para Button, como btnSalvar.
+- lbl para Label, como lblTitulo.
+- dtp para DateTimePicker, como dtpNascimento.
+- pic para PictureBox, como picFoto.
+- mcal para MonthCalendar, como mcalConsulta.
+- grp para GroupBox, como grpContato.
+- pnl para Panel, como pnlAcoes.
+
+Para evitar erros, escreva o nome exatamente como ele aparece na lista deste guia, respeitando letras maiúsculas e minúsculas.
+
+
+8. COMO ALTERAR O TEXTO DE UM LABEL OU BUTTON
+---------------------------------------------
+
+Para alterar um Label:
+1. Clique no Label no Designer.
+2. Na janela Properties, procure a propriedade "Text".
+3. Clique no valor atual.
+4. Apague o texto antigo.
+5. Digite o novo texto, por exemplo "Nome completo:".
+6. Pressione Enter.
+
+Para alterar um Button:
+1. Clique no botão no Designer.
+2. Procure a propriedade "Text" na janela Properties.
+3. Substitua o texto pelo texto desejado, por exemplo "Salvar cadastro".
+4. Pressione Enter.
+
+A propriedade Text altera o que o usuário vê. Ela não altera o nome usado no código. Para alterar o identificador, use a propriedade (Name).
+
+
+9. COMO ALTERAR TAMANHO E POSIÇÃO
+----------------------------------
+
+Existem duas formas principais.
+
+Pelo mouse:
+1. Selecione o componente.
+2. Arraste o componente para mudar a posição.
+3. Arraste um dos quadrados nas bordas para mudar o tamanho.
+4. Observe as linhas de alinhamento que aparecem durante o movimento.
+
+Pela janela Properties:
+1. Selecione o componente.
+2. Procure a propriedade "Location".
+3. Expanda Location se ela estiver recolhida.
+4. Altere X para a posição horizontal.
+5. Altere Y para a posição vertical.
+6. Procure a propriedade "Size".
+7. Altere Width para a largura.
+8. Altere Height para a altura.
+9. Pressione Enter após cada alteração.
+
+Em alguns controles a propriedade Dock ou Anchor também influencia o tamanho e a posição. Nesta tela, os controles principais foram posicionados de forma fixa para manter uma organização simples de trabalho acadêmico.
+
+
+10. COMO ALTERAR CORES
+----------------------
+
+1. Selecione o formulário ou o componente desejado.
+2. Na janela Properties, procure "BackColor" para a cor de fundo.
+3. Clique na seta ao lado da cor.
+4. Escolha uma cor na aba de cores predefinidas, personalizadas ou do sistema.
+5. Para alterar a cor do texto, procure "ForeColor".
+6. Escolha a cor e pressione Enter.
+
+Use cores com contraste suficiente. Por exemplo, texto escuro em fundo claro facilita a leitura. Se uma cor não ficar boa, use novamente BackColor ou ForeColor e escolha outra.
+
+
+11. COMO ALTERAR FONTES
+-----------------------
+
+1. Selecione um Label, Button ou outro controle.
+2. Procure a propriedade "Font".
+3. Clique no botão com três pontos ao lado dela.
+4. Escolha a família da fonte, como Segoe UI.
+5. Escolha o estilo, como Regular, Bold ou Italic.
+6. Escolha o tamanho.
+7. Clique em OK.
+
+Para um título, uma fonte maior e em negrito costuma funcionar bem. Para os campos, uma fonte regular e legível é suficiente. Evite usar muitas fontes diferentes na mesma tela.
+
+
+12. COMO USAR GROUPBOX
+----------------------
+
+O GroupBox é uma moldura com título usada para agrupar controles relacionados.
+
+Na tela criada:
+- grpIdentificacao agrupa os dados pessoais.
+- grpContato agrupa os dados de contato e endereço.
+- grpFoto delimita a área da foto.
+- grpAgendamento delimita os controles de consulta.
+
+Para criar um GroupBox:
+1. Localize GroupBox na Toolbox.
+2. Arraste-o para o formulário.
+3. Ajuste sua posição e tamanho.
+4. Selecione-o e altere a propriedade Text para o título da seção.
+5. Arraste TextBox, Label e Buttons para dentro da área do GroupBox.
+6. Altere sua propriedade (Name), por exemplo grpNovoGrupo.
+
+O GroupBox melhora a organização visual e ajuda o usuário a entender quais campos pertencem ao mesmo assunto.
+
+
+13. COMO USAR PANEL
+-------------------
+
+Panel é um contêiner retangular que pode agrupar outros controles. Ele não precisa ter título e é útil para organizar uma faixa de ações.
+
+Na tela, pnlAcoes agrupa os botões Salvar, Limpar e Cancelar na parte inferior.
+
+Para criar um Panel:
+1. Localize Panel na Toolbox.
+2. Arraste-o para o formulário.
+3. Ajuste Location e Size.
+4. Arraste os botões para dentro dele.
+5. Use BackColor para destacar a área, se desejar.
+6. Configure o nome pela propriedade (Name), por exemplo pnlBotoes.
+
+Um Panel também pode ser usado para criar uma área visual para filtros, cabeçalho ou outros grupos de controles.
+
+
+14. COMO USAR PICTUREBOX
+------------------------
+
+PictureBox é o componente usado para reservar uma área visual para uma imagem.
+
+Nesta tela, picFoto é um PictureBox com borda e tamanho adequado para uma foto. Ele está vazio de propósito: o carregamento da imagem ainda não foi implementado.
+
+Para adicionar um PictureBox:
+1. Localize PictureBox na Toolbox.
+2. Arraste-o para o GroupBox da foto.
+3. Ajuste a propriedade Size.
+4. Use BorderStyle para escolher uma borda.
+5. Use BackColor para escolher uma cor de fundo.
+6. Use SizeMode para definir como uma imagem futura será exibida. Zoom costuma preservar a proporção.
+7. Configure a propriedade (Name) como picFoto.
+
+O botão Selecionar Foto também é apenas visual neste projeto. Nenhum OpenFileDialog foi criado e nenhum arquivo é selecionado automaticamente.
+
+
+15. COMO USAR DATETIMEPICKER E MONTHCALENDAR
+---------------------------------------------
+
+DateTimePicker permite escolher uma data ou um horário usando um controle compacto.
+
+Na tela:
+- dtpNascimento representa a data de nascimento.
+- dtpHorarioConsulta representa o horário da consulta.
+
+Para alterar a configuração de um DateTimePicker:
+1. Selecione o controle.
+2. Procure Format.
+3. Escolha Short para uma data curta ou Time para horário.
+4. Para um horário com setas, a propriedade ShowUpDown pode ser configurada como True.
+5. Altere Name para dtpNascimento ou dtpHorarioConsulta conforme a finalidade.
+
+MonthCalendar exibe um calendário maior para escolha visual de uma data.
+
+Na tela, mcalConsulta representa a data da consulta.
+
+Para adicionar um MonthCalendar:
+1. Localize MonthCalendar na Toolbox.
+2. Arraste-o para o GroupBox de agendamento.
+3. Ajuste sua posição e tamanho.
+4. Configure (Name) como mcalConsulta.
+5. Não é necessário criar evento para deixar o calendário visualmente pronto.
+
+A seleção visual de uma data e a ação de agendar ainda não possuem lógica neste projeto.
+
+
+16. COMO CONFIGURAR OS NOMES DOS COMPONENTES
+---------------------------------------------
+
+Para cada controle, selecione-o, abra Properties, localize (Name), digite o nome e pressione Enter.
+
+Exemplos:
+1. Clique no campo Nome completo.
+2. Em (Name), digite txtNome.
+3. Clique no campo CPF.
+4. Em (Name), digite txtCPF.
+5. Clique no botão Salvar.
+6. Em (Name), digite btnSalvar.
+
+Sempre escolha nomes que expliquem a função visual do controle. Evite nomes como textBox1, button1 ou label3 porque eles dificultam a manutenção futura.
+
+
+17. COMO ENCONTRAR EVENTOS DE UM COMPONENTE
+--------------------------------------------
+
+Eventos são ações que podem acontecer, como um clique em um botão. Nesta etapa, os botões foram deixados sem eventos de propósito.
+
+Para visualizar os eventos:
+1. Selecione um componente.
+2. Abra a janela Properties com F4.
+3. Na parte superior da janela Properties, procure o ícone de raio.
+4. Clique no ícone de raio.
+5. A lista mudará das propriedades para os eventos.
+6. Em um Button, você verá eventos como Click.
+7. Em um TextBox, poderá ver eventos como TextChanged.
+8. Em um DateTimePicker, poderá ver eventos relacionados à alteração da data.
+
+Não dê duplo clique em um evento se você ainda não quiser criar um método. O duplo clique normalmente gera um método no arquivo Form1.cs. Como este trabalho deve conter somente a tela, os eventos estão vazios e não são necessários agora.
+
+
+18. COMO SABER QUAL COMPONENTE REPRESENTA CADA CAMPO
+----------------------------------------------------
+
+Clique no controle no Designer e confira a propriedade (Name) na janela Properties. O nome indica o tipo e a finalidade.
+
+- Se começar com txt, é um TextBox para digitação.
+- Se começar com btn, é um Button para uma ação futura.
+- Se começar com dtp, é um DateTimePicker para data ou horário.
+- Se começar com mcal, é um MonthCalendar.
+- Se começar com pic, é um PictureBox.
+- Se começar com grp, é um GroupBox.
+- Se começar com pnl, é um Panel.
+- Se começar com lbl, é um Label.
+
+O texto visível pode ser conferido na propriedade Text. Por exemplo, o componente txtCPF tem Name igual a txtCPF e normalmente fica ao lado do Label cujo texto é CPF:.
+
+
+19. COMO EXECUTAR O PROJETO
+----------------------------
+
+1. Salve os arquivos usando Ctrl+S.
+2. No Visual Studio, pressione F5 para executar com depuração.
+3. Também é possível clicar no botão verde de execução na parte superior.
+4. Aguarde a compilação.
+5. A janela Cadastro de Pessoas será aberta.
+6. Confira visualmente os grupos e os controles.
+7. Os botões não executarão ações porque nenhum evento foi implementado.
+8. Para fechar a tela, clique no X da janela ou use Alt+F4.
+
+Para executar sem depuração, use Ctrl+F5. Se o Visual Studio mostrar algum erro de compilação, observe o nome do arquivo e a linha indicada.
+
+
+20. COMO VISUALIZAR A TELA PRONTA
+----------------------------------
+
+Depois de executar o projeto, confira:
+- O título Cadastro de Pessoas no topo.
+- O grupo Identificação à esquerda.
+- O grupo Contato e endereço abaixo da identificação.
+- A área de Foto do usuário à direita.
+- O calendário e o horário no grupo Agendamento de consulta.
+- Os botões de ação na parte inferior.
+
+Caso algum campo não apareça, feche a execução, volte ao Designer e confira se o controle está dentro do GroupBox correto, se sua propriedade Visible está como True e se ele não foi colocado atrás de outro controle.
+
+
+21. COMO MODIFICAR A INTERFACE DEPOIS
+--------------------------------------
+
+1. Pare a execução do projeto usando Shift+F5.
+2. Volte para o Designer com Shift+F7.
+3. Selecione o controle desejado.
+4. Altere Text, Name, Size, Location, BackColor, ForeColor ou Font na janela Properties.
+5. Salve com Ctrl+S.
+6. Execute novamente com F5 para visualizar a alteração.
+
+Faça uma alteração de cada vez quando estiver aprendendo. Assim será mais fácil descobrir qual propriedade produziu o resultado observado.
+
+
+22. COMO ADICIONAR UM NOVO TEXTBOX
+-----------------------------------
+
+1. Abra o Designer.
+2. Abra a Toolbox com Ctrl+Alt+X.
+3. Pesquise por TextBox.
+4. Arraste o TextBox para o GroupBox desejado.
+5. Posicione-o usando o mouse ou Location.
+6. Ajuste seu tamanho usando Size ou as alças da borda.
+7. Altere (Name) para um nome claro, como txtObservacao.
+8. Adicione um Label próximo a ele.
+9. Altere o Text do Label para explicar o campo.
+10. Salve e execute o projeto para conferir.
+
+Não é necessário criar código para que um TextBox apareça. O código só será necessário futuramente se você quiser ler, validar ou salvar o conteúdo digitado.
+
+
+23. COMO ADICIONAR UM NOVO BUTTON
+---------------------------------
+
+1. Abra o Designer.
+2. Abra a Toolbox com Ctrl+Alt+X.
+3. Pesquise por Button.
+4. Arraste o Button para o Panel ou GroupBox apropriado.
+5. Altere Text para o texto que o usuário verá.
+6. Altere (Name) para um identificador claro, como btnNovoCampo.
+7. Ajuste Size, Location, Font e BackColor, se necessário.
+8. Não dê duplo clique no botão se não quiser criar um evento.
+9. Salve e execute para verificar a aparência.
+
+Um Button pode existir na tela sem realizar nenhuma ação. Para ele fazer algo, será necessário implementar posteriormente um evento Click e a lógica correspondente.
+
+
+24. COMO EVITAR APAGAR COMPONENTES ACIDENTALMENTE
+--------------------------------------------------
+
+- Salve frequentemente usando Ctrl+S.
+- Antes de pressionar Delete, confirme qual controle está selecionado.
+- Clique em uma área vazia do formulário antes de selecionar outro controle.
+- Use Ctrl+Z imediatamente se apagar algo por engano.
+- Faça uma cópia do projeto antes de mudanças grandes.
+- Evite editar manualmente Form1.Designer.cs enquanto o Designer estiver aberto.
+- Se o Visual Studio perguntar se deseja recarregar arquivos alterados, leia a mensagem antes de confirmar.
+- Não apague InitializeComponent(), pois o formulário depende dele para construir a tela.
+- Não apague os campos declarados no Designer que ainda são usados na inicialização.
+
+
+25. COMO IDENTIFICAR ERROS BÁSICOS NO DESIGNER
+-----------------------------------------------
+
+Erro: o formulário não abre no Designer.
+Possíveis causas: código inválido em Form1.Designer.cs ou alteração incompleta em um controle. Leia a lista de erros e confira a linha indicada.
+
+Erro: um controle não aparece.
+Verifique se Visible está como True, se o controle está dentro do contêiner correto e se Location não o colocou fora da área do formulário.
+
+Erro: aparece o nome textBox1 em vez do nome desejado.
+Selecione o controle e altere a propriedade (Name), não a propriedade Text.
+
+Erro: o texto do botão não muda.
+Altere Text no Button correto. A propriedade (Name) muda o identificador, não o texto visível.
+
+Erro: um componente está atrás de outro.
+Selecione o controle e use as opções Bring to Front ou Send to Back, normalmente disponíveis no menu de contexto do Designer.
+
+Erro: o projeto compila, mas um botão não faz nada.
+Isso é esperado nesta etapa. Os botões foram criados somente visualmente e não possuem eventos ou regras de negócio.
+
+Erro: o Designer cria um método de evento inesperado.
+Isso acontece normalmente quando se dá duplo clique em um controle ou evento. O método pode ser deixado vazio nesta fase, mas não há necessidade de criar novos eventos para esta interface.
+
+
+26. FUNÇÃO DE CADA TIPO DE COMPONENTE USADO
+--------------------------------------------
+
+Label: exibe textos explicativos, como Nome completo ou CPF. O usuário normalmente não digita nele.
+
+TextBox: permite que o usuário digite textos. Nesta tela ele representa nome, documentos, endereço, e-mail e telefone.
+
+Button: representa uma ação que poderá ser implementada no futuro. Nesta tela os botões são apenas visuais.
+
+DateTimePicker: permite escolher uma data ou horário de forma padronizada.
+
+MonthCalendar: exibe um calendário maior para facilitar a escolha de uma data.
+
+PictureBox: reserva uma área para exibir uma imagem futura.
+
+GroupBox: separa visualmente controles de um mesmo assunto e apresenta um título.
+
+Panel: agrupa controles sem necessariamente apresentar um título. Foi usado para os botões inferiores.
+
+Form: é a janela principal que contém todos os demais componentes.
+
+
+27. O QUE NÃO FOI IMPLEMENTADO
+------------------------------
+
+Esta entrega não implementa:
+- Classes de POO ou classes Model.
+- Validação de CPF, RG, CNH ou CEP.
+- Consulta de CEP ou API ViaCEP.
+- Requisições HTTP.
+- Banco de dados, SQL ou Entity Framework.
+- CRUD ou salvamento de dados.
+- Agendamento funcional.
+- Carregamento de fotos.
+- OpenFileDialog funcional.
+- Login ou autenticação.
+- Eventos de clique com regras de negócio.
+
+A partir desta tela, a implementação dessas partes poderá ser feita posteriormente de acordo com a organização e os estudos do projeto.
+
+
+28. RESUMO DO FLUXO DE TRABALHO
+-------------------------------
+
+1. Abrir WinFormsApp2.slnx.
+2. Abrir Form1.cs no Designer.
+3. Selecionar um componente.
+4. Alterar propriedades na janela Properties.
+5. Salvar com Ctrl+S.
+6. Executar com F5.
+7. Conferir visualmente.
+8. Voltar ao Designer para novas alterações.
+
+A interface está pronta para receber futuramente a lógica, mas a lógica não faz parte desta etapa.
